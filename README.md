@@ -2,7 +2,7 @@
 
 This repository contains code to create the homepage.
 
-**Link** - [sutanoya.github.io](https://sutanoya.github.io)
+**Link** - [sutanoya.github.io/website](https://sutanoya.github.io/website/)
 
 ## Instructions
 
