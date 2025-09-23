@@ -1,0 +1,192 @@
+/* -------------------------------------------------
+   Catppuccin - Mocha dark theme
+   ------------------------------------------------- */
+/* Core palette (names follow the official spec) */
+:root{
+    /* Base colours */
+    --ctp-base:     #1e1e2e;   /* page background   */
+    --ctp-mantle:   #181825;   /* card / wrapper    */
+    --ctp-surface0: #313244;
+    --ctp-surface1: #45475a;
+
+    /* Text */
+    --ctp-text:     #cdd6f4;
+    --ctp-subtext:  #bac2de;
+    --ctp-overlay:  #9399b2;
+
+    /* Accents  */
+    --accent:       #89b4fa;   /* Blue  */
+    --accent-hover: #b4befe;   /* Lavender (lighter) */
+}
+
+/* -------------------------------------------------
+   Global reset & typography
+   ------------------------------------------------- */
+*{box-sizing:border-box}
+
+body{
+    font-family: 'Roboto', Arial, sans-serif;
+    margin:0;
+    line-height:1.55;
+    color:var(--ctp-text);
+    background:var(--ctp-base);
+}
+
+/* -------------------------------------------------
+   Layout wrapper
+   ------------------------------------------------- */
+.wrapper{
+    max-width: 1000px;
+    margin:0 auto;
+    background:var(--ctp-mantle);
+    padding:2.5rem 2rem 3rem;
+}
+
+/* -------------------------------------------------
+   Header
+   ------------------------------------------------- */
+header{
+    border-bottom:4px solid var(--accent);
+    padding-bottom:1rem;
+    margin-bottom:2rem;
+}
+
+header h1{
+    margin:0;
+    font-size:clamp(1.8rem, 4.5vw, 2.6rem);
+    font-weight:700;
+    color:var(--accent);
+}
+
+header h2{
+    margin:.3rem 0 1rem 0;
+    font-size:1.1rem;
+    font-weight:400;
+    color:var(--ctp-overlay);
+    text-decoration: none;
+}
+
+.normlink{
+    text-decoration: none;
+    color:inherit;
+}
+.normlink:hover{
+    background:var(--ctp-surface1);
+}
+
+/* -------------------------------------------------
+   Contact line
+   ------------------------------------------------- */
+.contact{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.8rem 1.4rem;
+}
+.contact a{
+    color:var(--ctp-subtext);
+    text-decoration:none;
+    font-size:.95rem;
+    transition:color .2s ease;
+}
+.contact a i{
+    margin-right:.35rem;
+    color:var(--accent);
+}
+.contact a:hover,
+.contact a:focus{
+    color:var(--accent-hover);
+}
+
+/* -------------------------------------------------
+   Sections
+   ------------------------------------------------- */
+section{
+    margin-bottom:2.2rem;
+}
+section h3{
+    font-size:1.25rem;
+    margin:0 0 .8rem;
+    color:var(--accent);
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+.timeline-item{
+    margin-bottom:1.3rem;
+}
+.timeline-item h4{
+    margin:.1rem 0;
+    font-weight:600;
+}
+.timeline-item span.place{
+    font-weight:400;
+    color:var(--ctp-overlay);
+}
+
+/* Lists */
+ul.clean{
+    list-style:none;
+    padding-left:0;
+    margin-top:.3rem;
+}
+ul.clean li{
+    margin:.25rem 0;
+}
+.pub-list li{
+    margin:.45rem 0;
+}
+.pub-title{
+    font-weight:500;
+}
+.pub-meta{
+    color:var(--ctp-subtext);
+    font-size:.95rem;
+}
+
+/* Two‐column list for teaching */
+.columns{
+    columns: 2 300px;
+    column-gap:2rem;
+}
+.columns li{break-inside:avoid}
+
+/* -------------------------------------------------
+   Footer
+   ------------------------------------------------- */
+footer{
+    text-align:center;
+    font-size:.85rem;
+    color:var(--ctp-overlay);
+    padding-top:1.5rem;
+    border-top:1px solid var(--ctp-surface0);
+}
+
+/* -------------------------------------------------
+   Download-CV button styling
+   ------------------------------------------------- */
+.btn-cv{
+    background:var(--ctp-surface0);
+    color:var(--ctp-base);
+    font-weight:600;
+    padding-left:.45rem;
+    padding-right:.45rem;
+    border-radius:4px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:.4rem;
+    transition:background .25s ease;
+}
+.btn-cv i{          /* make icon inherit colour */
+    color:inherit;
+}
+.btn-cv:hover,
+.btn-cv:focus{
+    background:var(--ctp-surface1);
+}
+
+/* -------------------------------------------------
+   Responsive tweaks
+   ------------------------------------------------- */
+@media(max-width:600px){
+    .columns{columns:1 auto}
+}
